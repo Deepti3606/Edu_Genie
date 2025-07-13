@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-bubble {
+    animation: bubble 8s ease-in-out infinite;
+  }
+  
+  .animate-reverse {
+    animation-direction: reverse;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes bubble {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Backdrop blur support */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+/* Gradient text */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Theme Animation Classes */
+.theme-fadeIn {
+  animation: themeTransition 0.5s ease-in-out;
+}
+
+.theme-slideUp {
+  animation: slideUpTransition 0.6s ease-out;
+}
+
+.theme-glow {
+  animation: glowTransition 0.8s ease-in-out;
+}
+
+.theme-morph {
+  animation: morphTransition 0.7s ease-in-out;
+}
+
+.theme-neon {
+  animation: neonTransition 1s ease-in-out;
+}
+
+.theme-hologram {
+  animation: hologramTransition 1.2s ease-in-out;
+}
+
+.theme-matrix {
+  animation: matrixTransition 1s ease-in-out;
+}
+
+.theme-stars {
+  animation: starsTransition 1.5s ease-in-out;
+}
+
+.theme-neural {
+  animation: neuralTransition 1s ease-in-out;
+}
+
+/* Avatar Animation Classes */
+.avatar-blink {
+  animation: avatarBlink 4s ease-in-out infinite;
+}
+
+.avatar-bounce {
+  animation: avatarBounce 2s ease-in-out infinite;
+}
+
+.avatar-glow {
+  filter: drop-shadow(0 0 10px currentColor);
+  animation: avatarGlow 3s ease-in-out infinite;
+}
+
+.avatar-pulse {
+  animation: avatarPulse 2s ease-in-out infinite;
+}
+
+.avatar-wiggle {
+  animation: avatarWiggle 1s ease-in-out infinite;
+}
+
+.avatar-float {
+  animation: avatarFloat 3s ease-in-out infinite;
+}
+
+.avatar-spin {
+  animation: avatarSpin 4s linear infinite;
+}
+
+/* Keyframe Animations */
+@keyframes themeTransition {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUpTransition {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowTransition {
+  0% { opacity: 0; filter: brightness(0.5); }
+  50% { filter: brightness(1.2); }
+  100% { opacity: 1; filter: brightness(1); }
+}
+
+@keyframes morphTransition {
+  0% { opacity: 0; border-radius: 0; }
+  50% { border-radius: 50px; }
+  100% { opacity: 1; border-radius: 20px; }
+}
+
+@keyframes neonTransition {
+  0% { opacity: 0; text-shadow: none; }
+  50% { text-shadow: 0 0 20px currentColor; }
+  100% { opacity: 1; text-shadow: 0 0 10px currentColor; }
+}
+
+@keyframes hologramTransition {
+  0% { opacity: 0; filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(180deg); }
+  100% { opacity: 1; filter: hue-rotate(360deg); }
+}
+
+@keyframes matrixTransition {
+  0% { opacity: 0; filter: contrast(0); }
+  50% { filter: contrast(2); }
+  100% { opacity: 1; filter: contrast(1); }
+}
+
+@keyframes starsTransition {
+  0% { opacity: 0; transform: scale(0.8); }
+  50% { transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes neuralTransition {
+  0% { opacity: 0; filter: blur(5px); }
+  50% { filter: blur(2px); }
+  100% { opacity: 1; filter: blur(0); }
+}
+
+@keyframes avatarBlink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+@keyframes avatarBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes avatarGlow {
+  0%, 100% { filter: drop-shadow(0 0 5px currentColor); }
+  50% { filter: drop-shadow(0 0 20px currentColor); }
+}
+
+@keyframes avatarPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes avatarWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes avatarFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes avatarSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Special Theme Effects */
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+}
+
+.neumorphic {
+  box-shadow: 
+    20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+}
+
+/* Dynamic Theme Variables */
+:root {
+  --theme-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --theme-primary: #667eea;
+  --theme-secondary: #764ba2;
+  --theme-accent: #f093fb;
+  --theme-text: #2d3748;
+  --theme-card-bg: rgba(255,255,255,0.9);
+}
+
+/* Apply theme variables */
+body {
+  background: var(--theme-background);
+  color: var(--theme-text);
+  transition: all 0.5s ease;
+}
+
+.theme-card {
+  background: var(--theme-card-bg);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.theme-button {
+  background: linear-gradient(45deg, var(--theme-primary), var(--theme-secondary));
+  color: white;
+}
+
+.theme-accent {
+  color: var(--theme-accent);
+}
+
+/* Responsive Theme Adjustments */
+@media (max-width: 768px) {
+  .theme-card {
+    backdrop-filter: blur(5px);
+  }
+  
+  .avatar-bounce {
+    animation-duration: 3s;
+  }
+}
